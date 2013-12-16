@@ -3,7 +3,7 @@ Formatter
 
 A simple library for Visual Format Language, Auto Layout. 
 
-Samples:
+<h4>Samples:</h4>
 <pre>
 <strong>Add constraint to another view:</strong>
 [formatter addConstraint:[Constraint constraintView:<i>sampleView</i>
