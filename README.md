@@ -14,21 +14,21 @@ Samples:
                                            withRelation:RelationTypeEqualTo
                                            withSizeType:SizeTypeEqualTo]];
 
-Add constraint to super view:
+<strong>Add constraint to super view:</strong>
 [formatter addConstraint:[Constraint constraintView:sampleView
                                     toSuperViewEdge:SuperViewTopEdge 
                                            withSize:300 
                                        withDistance:20 
                                        withRelation:RelationTypeEqualTo 
                                        withSizeType:SizeTypeEqualTo]];
-Remove constraint:
+<strong>Remove constraint:</strong>
 [formatter removeConstraintByID:someID];
 
-Mofidy existing constraint:
+<strong>Mofidy existing constraint:</strong>
 Constraint *someConstraint = [formatter getConstraintByID:@"V:sampleView1->sampleView2"];
 someConstraint.distance += 15;
 [formatter updateConstraint:someConstraint];
 
-Apply constraints after adding, modifying or removing:
+<strong>Apply constraints after adding, modifying or removing:</strong>
 [formatter applyConstraints];
 </pre>
