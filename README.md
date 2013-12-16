@@ -4,7 +4,7 @@ Formatter
 A simple library for Visual Format Language, Auto Layout. 
 
 Samples:
-
+<pre>
 Add constraint to another view:
 [formatter addConstraint:[Constraint constraintView:sampleView
                                                  ToView:sampleView2
@@ -31,3 +31,4 @@ someConstraint.distance += 15;
 
 Apply constraints after adding, modifying or removing:
 [formatter applyConstraints];
+</pre>
