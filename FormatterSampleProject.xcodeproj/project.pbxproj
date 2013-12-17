@@ -101,8 +101,8 @@
 		2CB2691E185F573900744AAF = {
 			isa = PBXGroup;
 			children = (
-				2CB26930185F573900744AAF /* Formatter_ExampleProject */,
-				2CB2694F185F573900744AAF /* Formatter_ExampleProjectTests */,
+				2CB26930185F573900744AAF /* FormatterSampleProject */,
+				2CB2694F185F573900744AAF /* FormatterSampleProjectTests */,
 				2CB26929185F573900744AAF /* Frameworks */,
 				2CB26928185F573900744AAF /* Products */,
 			);
@@ -128,7 +128,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2CB26930185F573900744AAF /* Formatter_ExampleProject */ = {
+		2CB26930185F573900744AAF /* FormatterSampleProject */ = {
 			isa = PBXGroup;
 			children = (
 				2CB2697A185F575B00744AAF /* Enums */,
@@ -143,6 +143,7 @@
 				2CB26942185F573900744AAF /* Images.xcassets */,
 				2CB26931185F573900744AAF /* Supporting Files */,
 			);
+			name = FormatterSampleProject;
 			path = Formatter_ExampleProject;
 			sourceTree = "<group>";
 		};
@@ -157,12 +158,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2CB2694F185F573900744AAF /* Formatter_ExampleProjectTests */ = {
+		2CB2694F185F573900744AAF /* FormatterSampleProjectTests */ = {
 			isa = PBXGroup;
 			children = (
 				2CB26955185F573900744AAF /* Formatter_ExampleProjectTests.m */,
 				2CB26950185F573900744AAF /* Supporting Files */,
 			);
+			name = FormatterSampleProjectTests;
 			path = Formatter_ExampleProjectTests;
 			sourceTree = "<group>";
 		};
@@ -269,7 +271,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2CB26922185F573900744AAF /* Build configuration list for PBXProject "Formatter_ExampleProject" */;
+			buildConfigurationList = 2CB26922185F573900744AAF /* Build configuration list for PBXProject "FormatterSampleProject" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -506,7 +508,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2CB26922185F573900744AAF /* Build configuration list for PBXProject "Formatter_ExampleProject" */ = {
+		2CB26922185F573900744AAF /* Build configuration list for PBXProject "FormatterSampleProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CB26957185F573900744AAF /* Debug */,
@@ -522,6 +524,7 @@
 				2CB2695B185F573900744AAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CB2695C185F573900744AAF /* Build configuration list for PBXNativeTarget "Formatter_ExampleProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +533,7 @@
 				2CB2695E185F573900744AAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

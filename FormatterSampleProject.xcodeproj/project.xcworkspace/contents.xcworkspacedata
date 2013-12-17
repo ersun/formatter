@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Formatter_ExampleProject.xcodeproj">
+      location = "self:FormatterSampleProject.xcodeproj">
    </FileRef>
 </Workspace>
