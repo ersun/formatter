@@ -98,6 +98,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C42C702186223BF0013C230 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				2CB2697A185F575B00744AAF /* Enums */,
+				2CB2697B185F576100744AAF /* Classes */,
+				2CB2697C185F576700744AAF /* Categories */,
+			);
+			name = Formatter;
+			sourceTree = "<group>";
+		};
 		2CB2691E185F573900744AAF = {
 			isa = PBXGroup;
 			children = (
@@ -131,9 +141,7 @@
 		2CB26930185F573900744AAF /* FormatterSampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				2CB2697A185F575B00744AAF /* Enums */,
-				2CB2697B185F576100744AAF /* Classes */,
-				2CB2697C185F576700744AAF /* Categories */,
+				2C42C702186223BF0013C230 /* Formatter */,
 				2CB2697D185F577100744AAF /* Images */,
 				2CB2696D185F574900744AAF /* AppDelegate.h */,
 				2CB2696E185F574900744AAF /* AppDelegate.m */,
