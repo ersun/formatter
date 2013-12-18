@@ -7,12 +7,12 @@ A simple library for Visual Format Language, Auto Layout.
 <pre>
 <strong>Add constraint to another view:</strong>
 [formatter addConstraint:[Constraint constraintView:<i>sampleView</i>
-                                                 ToView:<i>sampleView2</i>
-                                               withSize:<i>40</i>
-                                           withDistance:<i>3</i>
-                                          withDirection:<i>LayoutDirectionVertical</i>
-                                           withRelation:<i>RelationTypeEqualTo</i>
-                                           withSizeType:<i>SizeTypeEqualTo</i>]];
+                                             ToView:<i>sampleView2</i>
+                                           withSize:<i>40</i>
+                                       withDistance:<i>3</i>
+                                      withDirection:<i>LayoutDirectionVertical</i>
+                                       withRelation:<i>RelationTypeEqualTo</i>
+                                       withSizeType:<i>SizeTypeEqualTo</i>]];
 
 <strong>Add constraint to super view:</strong>
 [formatter addConstraint:[Constraint constraintView:<i>sampleView</i>
