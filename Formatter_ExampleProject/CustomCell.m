@@ -27,10 +27,34 @@
         [self.contentView addSubview:self.label];
         [self.contentView addSubview:self.view];
         
-        [f addConstraint:[Constraint constraintView:self.label toSuperViewEdge:SuperViewTopEdge withSize:40 withDistance:10 withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo]];
-        [f addConstraint:[Constraint constraintView:self.view ToView:self.label withSize:40 withDistance:10 withDirection:LayoutDirectionHorizontal withRelation:20 withSizeType:SizeTypeEqualTo]];
-        [f addConstraint:[Constraint constraintView:self.view toSuperViewEdge:SuperViewTopEdge withSize:40 withDistance:10 withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo]];
-        [f addConstraint:[Constraint constraintView:self.label toSuperViewEdge:SuperViewLeftEdge withSize:30 withDistance:10 withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo]];
+        [f addConstraint:[Constraint constraintView:self.label
+                                    toSuperViewEdge:SuperViewTopEdge
+                                           withSize:40
+                                       withDistance:10
+                                       withRelation:RelationTypeEqualTo
+                                       withSizeType:SizeTypeEqualTo]];
+        
+        [f addConstraint:[Constraint constraintView:self.view
+                                             ToView:self.label
+                                           withSize:40
+                                       withDistance:10
+                                      withDirection:LayoutDirectionHorizontal
+                                       withRelation:RelationTypeEqualTo
+                                       withSizeType:SizeTypeEqualTo]];
+        
+        [f addConstraint:[Constraint constraintView:self.view
+                                    toSuperViewEdge:SuperViewTopEdge
+                                           withSize:40
+                                       withDistance:10
+                                       withRelation:RelationTypeEqualTo
+                                       withSizeType:SizeTypeEqualTo]];
+        
+        [f addConstraint:[Constraint constraintView:self.label
+                                    toSuperViewEdge:SuperViewLeftEdge
+                                           withSize:30
+                                       withDistance:10
+                                       withRelation:RelationTypeEqualTo
+                                       withSizeType:SizeTypeEqualTo]];
         
         [f applyConstraints];
     }
