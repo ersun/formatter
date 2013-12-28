@@ -11,9 +11,10 @@
 
 @interface Formatter : NSObject
 
-@property (strong,nonatomic) UIViewController *workspace;
+@property (strong,nonatomic) UIView *workspace;
+@property (strong,nonatomic) UIResponder *controller;
 
--(id)initWithWorkspace:(UIViewController *)workspace;
+-(id)initWithWorkspace:(UIView *)workspace withController:(UIResponder *)controller;
 
 -(NSString *)addConstraint:(Constraint *)constraint;
 

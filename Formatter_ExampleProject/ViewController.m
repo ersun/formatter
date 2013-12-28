@@ -50,7 +50,7 @@
     
     
     // Formatter instantiation, workspace is the view controller that controls the main view.
-    Formatter *formatter = [[Formatter alloc] initWithWorkspace:self];
+    Formatter *formatter = [[Formatter alloc] initWithWorkspace:self.view withController:self];
     
     //1- Adding constraint by assigning properties.
     Constraint *verticalConstraintLine1 = [[Constraint alloc] init];

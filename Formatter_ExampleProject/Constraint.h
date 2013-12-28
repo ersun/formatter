@@ -30,10 +30,11 @@
 @property (nonatomic) enum ConstraintPriority distancePriority;
 @property (nonatomic) enum SuperViewEdge isConnectedToSuperViewEdge;
 @property (strong,nonatomic) NSDictionary *variableBindingsOfViews;
+@property (strong, nonatomic) UIView *workspace;
+@property (strong, nonatomic) UIResponder *controller;
 
 -(id)copy;
 
--(void)setWorkspace:(UIViewController *)workspace;
 -(void)setVariableBindings;
 -(void)setViewNames;
 

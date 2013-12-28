@@ -10,9 +10,6 @@
 
 @interface Constraint ()
 
-#pragma mark Private Properties
-@property (strong, nonatomic) UIViewController *workspace;
-
 @end
 
 @implementation Constraint
@@ -71,7 +68,7 @@
 
 -(void)setViewNames
 {
-    if (self.workspace)
+    if (self.controller)
     {
         if (!self.constrainsToView.name)
             self.constrainsToView.name = [self getVariableName:self.constrainsToView];
@@ -95,6 +92,7 @@
     copy.size = self.size;
     copy.sizeType = self.sizeType;
     copy.workspace = self.workspace;
+    copy.controller = self.controller;
     copy.isConnectedToSuperViewEdge = self.isConnectedToSuperViewEdge;
     copy.variableBindingsOfViews = self.variableBindingsOfViews;
     
@@ -126,13 +124,13 @@
 {
     unsigned int numberOfInstanceVariables; //out Parameter
     NSString *variableName;
-    Ivar *instanceVariables = class_copyIvarList(self.workspace.class, &numberOfInstanceVariables);
+    Ivar *instanceVariables = class_copyIvarList(self.controller.class, &numberOfInstanceVariables);
     // Ivar = instance variable
     
     for(int i = 0; i < numberOfInstanceVariables; i++)
     {
         Ivar currentInstanceVariable = instanceVariables[i];
-        if ([object_getIvar(self.workspace, currentInstanceVariable) isEqual:instanceVariable])
+        if ([object_getIvar(self.controller, currentInstanceVariable) isEqual:instanceVariable])
         {
             variableName = [NSString stringWithUTF8String:ivar_getName(currentInstanceVariable)];
             break;

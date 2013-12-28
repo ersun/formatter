@@ -32,6 +32,7 @@
 -(NSString *)addConstraint:(Constraint *)constraint
 {
     constraint.workspace = self.workspace;
+    constraint.controller = self.controller;
     [constraint setVariableBindings];
     [constraint setViewNames];
     [self.constraints addObject: constraint];
@@ -92,7 +93,7 @@
     
 //    [self.workspace.view removeConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintString options:0 metrics:nil views:constraint.variableBindingsOfViews]];
     
-    [self.workspace.view removeConstraints:self.workspace.view.constraints];
+    [self.workspace removeConstraints:self.workspace.constraints];
     
     [self.constraints removeObject:constraint];
     
@@ -257,7 +258,7 @@
         return;
     }
     else
-        [self.workspace.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintString options:0 metrics:nil views:dictionaryOfVariableBindings]];
+        [self.workspace addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintString options:0 metrics:nil views:dictionaryOfVariableBindings]];
     
     viewToBeConstrained.translatesAutoresizingMaskIntoConstraints = NO;
 }
@@ -297,7 +298,7 @@
         return;
     }
     else
-        [self.workspace.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintString options:0 metrics:nil views:dictionaryOfVariableBindings]];
+        [self.workspace addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintString options:0 metrics:nil views:dictionaryOfVariableBindings]];
     
     viewToBeConstrained.translatesAutoresizingMaskIntoConstraints = NO;
     view.translatesAutoresizingMaskIntoConstraints = NO;
@@ -315,12 +316,13 @@
     return self;
 }
 
--(id)initWithWorkspace:(UIViewController *)workspace
+-(id)initWithWorkspace:(UIView *)workspace withController:(UIResponder *)controller
 {
     self = [super init];
     if (self)
     {
         self.workspace = workspace;
+        self.controller = controller;
         self.constraints = [[NSMutableArray alloc]init];
     }
     return self;
