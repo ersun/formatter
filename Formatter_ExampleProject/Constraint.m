@@ -12,6 +12,7 @@
 
 #pragma mark Private Properties
 @property (strong, nonatomic) UIView *workspace;
+@property (strong, nonatomic) UIResponder *controller;
 
 @end
 
@@ -71,7 +72,7 @@
 
 -(void)setViewNames
 {
-    if (self.workspace)
+    if (self.controller)
     {
         if (!self.constrainsToView.name)
             self.constrainsToView.name = [self getVariableName:self.constrainsToView];
@@ -126,7 +127,7 @@
 {
     unsigned int numberOfInstanceVariables; //out Parameter
     NSString *variableName;
-    Ivar *instanceVariables = class_copyIvarList(self.workspace.class, &numberOfInstanceVariables);
+    Ivar *instanceVariables = class_copyIvarList(self.controller.class, &numberOfInstanceVariables);
     // Ivar = instance variable
     
     for(int i = 0; i < numberOfInstanceVariables; i++)

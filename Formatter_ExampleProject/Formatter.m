@@ -92,7 +92,7 @@
     
 //    [self.workspace.view removeConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintString options:0 metrics:nil views:constraint.variableBindingsOfViews]];
     
-    [self.workspace removeConstraints:self.workspace.view.constraints];
+    [self.workspace removeConstraints:self.workspace.constraints];
     
     [self.constraints removeObject:constraint];
     
@@ -315,12 +315,13 @@
     return self;
 }
 
--(id)initWithWorkspace:(UIView *)workspace
+-(id)initWithWorkspace:(UIView *)workspace withController:(UIResponder *)controller
 {
     self = [super init];
     if (self)
     {
         self.workspace = workspace;
+        self.controller = controller;
         self.constraints = [[NSMutableArray alloc]init];
     }
     return self;
