@@ -92,7 +92,7 @@
     
 //    [self.workspace.view removeConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintString options:0 metrics:nil views:constraint.variableBindingsOfViews]];
     
-    [self.workspace.view removeConstraints:self.workspace.view.constraints];
+    [self.workspace removeConstraints:self.workspace.view.constraints];
     
     [self.constraints removeObject:constraint];
     
@@ -257,7 +257,7 @@
         return;
     }
     else
-        [self.workspace.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintString options:0 metrics:nil views:dictionaryOfVariableBindings]];
+        [self.workspace addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintString options:0 metrics:nil views:dictionaryOfVariableBindings]];
     
     viewToBeConstrained.translatesAutoresizingMaskIntoConstraints = NO;
 }
@@ -297,7 +297,7 @@
         return;
     }
     else
-        [self.workspace.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintString options:0 metrics:nil views:dictionaryOfVariableBindings]];
+        [self.workspace addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constraintString options:0 metrics:nil views:dictionaryOfVariableBindings]];
     
     viewToBeConstrained.translatesAutoresizingMaskIntoConstraints = NO;
     view.translatesAutoresizingMaskIntoConstraints = NO;
@@ -315,7 +315,7 @@
     return self;
 }
 
--(id)initWithWorkspace:(UIViewController *)workspace
+-(id)initWithWorkspace:(UIView *)workspace
 {
     self = [super init];
     if (self)

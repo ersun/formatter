@@ -33,7 +33,7 @@
 
 -(id)copy;
 
--(void)setWorkspace:(UIViewController *)workspace;
+-(void)setWorkspace:(UIView *)workspace;
 -(void)setVariableBindings;
 -(void)setViewNames;
 

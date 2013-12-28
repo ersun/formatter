@@ -11,7 +11,7 @@
 @interface Constraint ()
 
 #pragma mark Private Properties
-@property (strong, nonatomic) UIViewController *workspace;
+@property (strong, nonatomic) UIView *workspace;
 
 @end
 
