@@ -16,10 +16,16 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
-        Formatter *f = [[Formatter alloc] initWithWorkspace:self withController:self];
+        Formatter *f = [[Formatter alloc] initWithWorkspace:self.contentView withController:self];
+        
+        self.label = [[UILabel alloc]init];
+        self.view = [[UIView alloc]init];
         
         self.label.text = @"asdasd";
         self.view.backgroundColor = [UIColor redColor];
+        
+        [self.contentView addSubview:self.label];
+        [self.contentView addSubview:self.view];
         
         [f addConstraint:[Constraint constraintView:self.label toSuperViewEdge:SuperViewTopEdge withSize:40 withDistance:10 withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo]];
         [f addConstraint:[Constraint constraintView:self.view ToView:self.label withSize:40 withDistance:10 withDirection:LayoutDirectionHorizontal withRelation:20 withSizeType:SizeTypeEqualTo]];
