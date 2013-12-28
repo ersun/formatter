@@ -49,7 +49,6 @@
     [self.view addSubview:textField1];
     
     
-    
     // Formatter instantiation, workspace is the view controller that controls the main view.
     Formatter *formatter = [[Formatter alloc] initWithWorkspace:self];
     
