@@ -32,6 +32,7 @@
 -(NSString *)addConstraint:(Constraint *)constraint
 {
     constraint.workspace = self.workspace;
+    constraint.controller = self.controller;
     [constraint setVariableBindings];
     [constraint setViewNames];
     [self.constraints addObject: constraint];

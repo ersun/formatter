@@ -10,10 +10,6 @@
 
 @interface Constraint ()
 
-#pragma mark Private Properties
-@property (strong, nonatomic) UIView *workspace;
-@property (strong, nonatomic) UIResponder *controller;
-
 @end
 
 @implementation Constraint
@@ -96,6 +92,7 @@
     copy.size = self.size;
     copy.sizeType = self.sizeType;
     copy.workspace = self.workspace;
+    copy.controller = self.controller;
     copy.isConnectedToSuperViewEdge = self.isConnectedToSuperViewEdge;
     copy.variableBindingsOfViews = self.variableBindingsOfViews;
     
@@ -133,7 +130,7 @@
     for(int i = 0; i < numberOfInstanceVariables; i++)
     {
         Ivar currentInstanceVariable = instanceVariables[i];
-        if ([object_getIvar(self.workspace, currentInstanceVariable) isEqual:instanceVariable])
+        if ([object_getIvar(self.controller, currentInstanceVariable) isEqual:instanceVariable])
         {
             variableName = [NSString stringWithUTF8String:ivar_getName(currentInstanceVariable)];
             break;
