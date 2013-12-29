@@ -103,22 +103,22 @@
 
 +(Constraint *)constraintView:(UIView *)viewToBeConstrained toView:(UIView *)constrainsToView withDirection:(enum LayoutDirection)direction withSize:(CGFloat)size withDistance:(CGFloat)distance
 {
-    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToView:constrainsToView withSize:size withDistance:distance withDirection:direction withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo];
+    return [[Constraint alloc]initWithView:viewToBeConstrained toView:constrainsToView withDirection:direction withSize:size withSizeType:SizeTypeEqualTo withSizePriority:ConstraintPriorityNONE withDistance:distance withRelationType:RelationTypeEqualTo withDistancePriority:ConstraintPriorityNONE];
 }
 
 +(Constraint *)constraintView:(UIView *)viewToBeConstrained toSuperViewEdge:(enum SuperViewEdge)superViewEdge withSize:(CGFloat)size withDistance:(CGFloat)distance;
 {
-    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToSuperViewEdge:superViewEdge withSize:size withDistance:distance withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo];
+    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToSuperViewEdge:superViewEdge withSize:size withSizeType:SizeTypeEqualTo withSizePriority:ConstraintPriorityNONE withDistance:distance withRelationType:RelationTypeEqualTo withDistancePriority:ConstraintPriorityNONE];
 }
 
 +(Constraint *)constraintView:(UIView *)viewToBeConstrained toView:(UIView *)constrainsToView withDirection:(enum LayoutDirection)layoutDirection withSize:(CGFloat)size withSizeType:(enum SizeType)sizeType withSizePriority:(enum ConstraintPriority)sizePriority withDistance:(CGFloat)distance withRelationType:(enum RelationType)relationType withDistancePriority:(enum ConstraintPriority)distancePriority
 {
-    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToView:constrainsToView withSize:size withDistance:distance withDirection:layoutDirection withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo];
+    return [[Constraint alloc]initWithView:viewToBeConstrained toView:constrainsToView withDirection:layoutDirection withSize:size withSizeType:sizeType withSizePriority:sizePriority withDistance:distance withRelationType:relationType withDistancePriority:distancePriority];
 }
 
 +(Constraint *)constraintView:(UIView *)viewToBeConstrained toSuperViewEdge:(enum SuperViewEdge)superViewEdge withSize:(CGFloat)size withSizeType:(enum SizeType)sizeType withSizePriority:(enum ConstraintPriority)sizePriority withDistance:(CGFloat)distance withDistanceType:(enum RelationType)relationType withDistancePriority:(enum ConstraintPriority)distancePriority
 {
-    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToSuperViewEdge:superViewEdge withSize:size withDistance:distance withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo];
+    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToSuperViewEdge:superViewEdge withSize:size withSizeType:sizeType withSizePriority:sizePriority withDistance:distance withRelationType:relationType withDistancePriority:distancePriority];
 }
 
 #pragma mark Private Methods
@@ -181,14 +181,14 @@
         self.direction = direction;
         self.relationType = relationType;
         self.sizeType = sizeType;
-        self.sizePriority = FormatterDefaultPriority;
-        self.distancePriority = FormatterDefaultPriority;
+        self.sizePriority = sizePriority;
+        self.distancePriority = distancePriority;
         _ID = [NSString stringWithFormat:@"%@->%@",self.viewToBeConstrained.name,self.constrainsToView.name];
     }
     return self;
 }
 
--(id)initWithView:(UIView *)viewToBeConstrained constrainsToSuperViewEdge:(enum SuperViewEdge)superViewEdge withSize:(CGFloat)size withDistance:(CGFloat)distance withRelation:(enum RelationType)relationType withSizeType:(enum SizeType)sizeType
+-(id)initWithView:(UIView *)viewToBeConstrained constrainsToSuperViewEdge:(enum SuperViewEdge)superViewEdge withSize:(CGFloat)size withSizeType:(enum SizeType)sizeType withSizePriority:(enum ConstraintPriority)sizePriority withDistance:(CGFloat)distance withRelationType:(enum RelationType)relationType withDistancePriority:(enum ConstraintPriority)distancePriority
 {
     self = [super init];
     if (self)
@@ -199,8 +199,8 @@
         self.distance = distance;
         self.relationType = relationType;
         self.sizeType = sizeType;
-        self.sizePriority = FormatterDefaultPriority;
-        self.distancePriority = FormatterDefaultPriority;
+        self.sizePriority = sizePriority;
+        self.distancePriority = distancePriority;
         if (superViewEdge == SuperViewTopEdge)
             _ID = [NSString stringWithFormat:@"%@->%@",self.viewToBeConstrained.name,@"TOP"];
         else if (superViewEdge == SuperViewBottomEdge)
