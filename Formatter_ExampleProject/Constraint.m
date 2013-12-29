@@ -101,14 +101,24 @@
 
 #pragma mark Class Methods
 
-+(Constraint *)constraintView:(UIView *)viewToBeConstrained ToView:(UIView *)constrainsToView withSize:(CGFloat)size withDistance:(CGFloat)distance withDirection:(enum LayoutDirection)layoutDirection withRelation:(enum RelationType)relationType withSizeType:(enum SizeType)sizeType
++(Constraint *)constraintView:(UIView *)viewToBeConstrained toView:(UIView *)constrainsToView withDirection:(enum LayoutDirection)direction withSize:(CGFloat)size withDistance:(CGFloat)distance
 {
-    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToView:constrainsToView withSize:size withDistance:distance withDirection:layoutDirection withRelation:relationType withSizeType:sizeType];
+    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToView:constrainsToView withSize:size withDistance:distance withDirection:direction withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo];
 }
 
-+(Constraint *)constraintView:(UIView *)viewToBeConstrained toSuperViewEdge:(enum SuperViewEdge)superViewEdge withSize:(CGFloat)size withDistance:(CGFloat)distance withRelation:(enum RelationType)relationType withSizeType:(enum SizeType)sizeType
++(Constraint *)constraintView:(UIView *)viewToBeConstrained toSuperViewEdge:(enum SuperViewEdge)superViewEdge withSize:(CGFloat)size withDistance:(CGFloat)distance;
 {
-    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToSuperViewEdge:superViewEdge withSize:size withDistance:distance withRelation:relationType withSizeType:sizeType];
+    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToSuperViewEdge:superViewEdge withSize:size withDistance:distance withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo];
+}
+
++(Constraint *)constraintView:(UIView *)viewToBeConstrained toView:(UIView *)constrainsToView withDirection:(enum LayoutDirection)layoutDirection withSize:(CGFloat)size withSizeType:(enum SizeType)sizeType withSizePriority:(enum ConstraintPriority)sizePriority withDistance:(CGFloat)distance withRelationType:(enum RelationType)relationType withDistancePriority:(enum ConstraintPriority)distancePriority
+{
+    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToView:constrainsToView withSize:size withDistance:distance withDirection:layoutDirection withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo];
+}
+
++(Constraint *)constraintView:(UIView *)viewToBeConstrained toSuperViewEdge:(enum SuperViewEdge)superViewEdge withSize:(CGFloat)size withSizeType:(enum SizeType)sizeType withSizePriority:(enum ConstraintPriority)sizePriority withDistance:(CGFloat)distance withDistanceType:(enum RelationType)relationType withDistancePriority:(enum ConstraintPriority)distancePriority
+{
+    return [[Constraint alloc]initWithView:viewToBeConstrained constrainsToSuperViewEdge:superViewEdge withSize:size withDistance:distance withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo];
 }
 
 #pragma mark Private Methods
@@ -159,7 +169,7 @@
     return self;
 }
 
--(id)initWithView:(UIView *)viewToBeConstrained constrainsToView:(UIView *)constrainsToView withSize:(CGFloat)size withDistance:(CGFloat)distance withDirection:(enum LayoutDirection)layoutDirection withRelation:(enum RelationType)relationType withSizeType:(enum SizeType)sizeType
+-(id)initWithView:(UIView *)viewToBeConstrained toView:(UIView *)constrainsToView withDirection:(enum LayoutDirection)direction withSize:(CGFloat)size withSizeType:(enum SizeType)sizeType withSizePriority:(enum ConstraintPriority)sizePriority withDistance:(CGFloat)distance withRelationType:(enum RelationType)relationType withDistancePriority:(enum ConstraintPriority)distancePriority
 {
     self = [super init];
     if (self)
@@ -168,7 +178,7 @@
         self.constrainsToView = constrainsToView;
         self.size = size;
         self.distance = distance;
-        self.direction = layoutDirection;
+        self.direction = direction;
         self.relationType = relationType;
         self.sizeType = sizeType;
         self.sizePriority = FormatterDefaultPriority;

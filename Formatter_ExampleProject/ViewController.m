@@ -69,20 +69,19 @@
     
     //2- Adding constraint with Constraint class method
     [formatter addConstraint:[Constraint constraintView:key1
-                                                 ToView:line1
+                                                 toView:line1
+                                          withDirection:LayoutDirectionVertical
                                                withSize:40
                                            withDistance:3
-                                          withDirection:LayoutDirectionVertical
-                                           withRelation:RelationTypeEqualTo
-                                           withSizeType:SizeTypeEqualTo]];
+                              ]];
     
-    [formatter addConstraint:[Constraint constraintView:line2 ToView:key1 withSize:1 withDistance:10 withDirection:LayoutDirectionVertical withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo]];
-    [formatter addConstraint:[Constraint constraintView:textField1 ToView:line1 withSize:40 withDistance:3 withDirection:LayoutDirectionVertical withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo]];
+    [formatter addConstraint:[Constraint constraintView:line2 toView:key1 withDirection:LayoutDirectionVertical withSize:1 withDistance:10 ]];
+    [formatter addConstraint:[Constraint constraintView:textField1 toView:line1 withDirection:LayoutDirectionVertical withSize:40 withDistance:3]];
     
-    [formatter addConstraint:[Constraint constraintView:line1 toSuperViewEdge:SuperViewLeftEdge withSize:300 withDistance:20 withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo]];
-    [formatter addConstraint:[Constraint constraintView:key1 toSuperViewEdge:SuperViewLeftEdge withSize:40 withDistance:20 withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo]];
-    [formatter addConstraint:[Constraint constraintView:textField1 ToView:key1 withSize:200 withDistance:20 withDirection:LayoutDirectionHorizontal withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo]];
-    [formatter addConstraint:[Constraint constraintView:line2 toSuperViewEdge:SuperViewLeftEdge withSize:300 withDistance:20 withRelation:RelationTypeEqualTo withSizeType:SizeTypeEqualTo]];
+    [formatter addConstraint:[Constraint constraintView:line1 toSuperViewEdge:SuperViewLeftEdge withSize:300 withDistance:20]];
+    [formatter addConstraint:[Constraint constraintView:key1 toSuperViewEdge:SuperViewLeftEdge withSize:40 withDistance:20]];
+    [formatter addConstraint:[Constraint constraintView:textField1 toView:key1 withDirection:LayoutDirectionHorizontal withSize:200 withDistance:20 ]];
+    [formatter addConstraint:[Constraint constraintView:line2 toSuperViewEdge:SuperViewLeftEdge withSize:300 withDistance:20]];
     
     [formatter applyConstraints]; // Appyling all constraints added to formatter
     

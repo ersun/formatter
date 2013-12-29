@@ -41,6 +41,10 @@
 -(id)initWithView:(UIView *)viewToBeConstrained constrainsToView:(UIView *)constrainsToView withSize:(CGFloat)size withDistance:(CGFloat)distance withDirection:(enum LayoutDirection)layoutDirection withRelation:(enum RelationType)relationType withSizeType:(enum SizeType)sizeType;
 -(id)initWithView:(UIView *)viewToBeConstrained constrainsToSuperViewEdge:(enum SuperViewEdge)superViewEdge withSize:(CGFloat)size withDistance:(CGFloat)distance withRelation:(enum RelationType)relationType withSizeType:(enum SizeType)sizeType;
 
-+(Constraint *)constraintView:(UIView *)viewToBeConstrained ToView:(UIView *)constrainsToView withSize:(CGFloat)size withDistance:(CGFloat)distance withDirection:(enum LayoutDirection)layoutDirection withRelation:(enum RelationType)relationType withSizeType:(enum SizeType)sizeType;
-+(Constraint *)constraintView:(UIView *)viewToBeConstrained toSuperViewEdge:(enum SuperViewEdge)superViewEdge withSize:(CGFloat)size withDistance:(CGFloat)distance withRelation:(enum RelationType)relationType withSizeType:(enum SizeType)sizeType;
++(Constraint *)constraintView:(UIView *)viewToBeConstrained toView:(UIView *)constrainsToView withDirection:(enum LayoutDirection)direction withSize:(CGFloat)size withDistance:(CGFloat)distance;
++(Constraint *)constraintView:(UIView *)viewToBeConstrained toSuperViewEdge:(enum SuperViewEdge)superViewEdge withSize:(CGFloat)size withDistance:(CGFloat)distance;
+
++(Constraint *)constraintView:(UIView *)viewToBeConstrained toView:(UIView *)constrainsToView withDirection:(enum LayoutDirection)direction withSize:(CGFloat)size withSizeType:(enum SizeType)sizeType withSizePriority:(enum ConstraintPriority)sizePriority withDistance:(CGFloat)distance withRelationType:(enum RelationType)relationType withDistancePriority:(enum ConstraintPriority)distancePriority;
++(Constraint *)constraintView:(UIView *)viewToBeConstrained toSuperViewEdge:(enum SuperViewEdge)superViewEdge withSize:(CGFloat)size withSizeType:(enum SizeType)sizeType withSizePriority:(enum ConstraintPriority)sizePriority withDistance:(CGFloat)distance withDistanceType:(enum RelationType)relationType withDistancePriority:(enum ConstraintPriority)distancePriority;
+
 @end

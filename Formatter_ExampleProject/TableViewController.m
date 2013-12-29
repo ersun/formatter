@@ -54,7 +54,7 @@
 {
 
     // Return the number of rows in the section.
-    return 1;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
