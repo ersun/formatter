@@ -1,7 +1,7 @@
 Formatter
 =========
 
-A simple library for Visual Format Language, Auto Layout. 
+A simple wrapper for Visual Format Language. 
 
 <h4>Samples:</h4>
 <pre>
