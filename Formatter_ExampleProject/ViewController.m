@@ -80,9 +80,12 @@
     [formatter addConstraint:[Constraint constraintView:textField1 toView:line1 withDirection:LayoutDirectionVertical withSize:40 withDistance:3]];
     
     [formatter addConstraint:[Constraint constraintView:line1 toSuperViewEdge:SuperViewLeftEdge withSize:300 withDistance:20]];
-    [formatter addConstraint:[Constraint constraintView:key1 toSuperViewEdge:SuperViewLeftEdge withSize:40 withDistance:20]];
-    [formatter addConstraint:[Constraint constraintView:textField1 toView:key1 withDirection:LayoutDirectionHorizontal withSize:200 withDistance:20 ]];
-    [formatter addConstraint:[Constraint constraintView:line2 toSuperViewEdge:SuperViewLeftEdge withSize:300 withDistance:20]];
+    
+    [formatter addConstraints:[Constraint constraintView:line1 toSuperViewEdge:SuperViewLeftEdge withSize:300 withDistance:20],
+                              [Constraint constraintView:key1 toSuperViewEdge:SuperViewLeftEdge withSize:40 withDistance:20],
+                              [Constraint constraintView:textField1 toView:key1 withDirection:LayoutDirectionHorizontal withSize:200 withDistance:20 ],
+                              [Constraint constraintView:line2 toSuperViewEdge:SuperViewLeftEdge withSize:300 withDistance:20],
+    nil];
     
     [formatter applyConstraints]; // Appyling all constraints added to formatter
     
