@@ -26,6 +26,7 @@
 
 -(void)applyConstraints;
 -(void)applyConstraint:(Constraint *)constraint;
+-(void)animateConstraint:(Constraint *)constraint withDuration:(NSTimeInterval)duration withOptions:(UIViewAnimationOptions)options;
 
 -(void)clearConstraintList;
 

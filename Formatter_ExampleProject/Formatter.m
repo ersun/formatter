@@ -130,6 +130,13 @@
     [self.constraints removeAllObjects];
 }
 
+-(void)animateConstraint:(Constraint *)constraint withDuration:(NSTimeInterval)duration withOptions:(UIViewAnimationOptions)options
+{
+    [UIView animateWithDuration:duration delay:0 options:options animations:^{
+        [self applyConstraint:constraint];
+    } completion:nil];
+}
+
 -(void)applyConstraints
 {
     for (Constraint *constraint in self.constraints)
