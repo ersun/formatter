@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C20DDDC186EEF8B0088EFD4 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DDDB186EEF8B0088EFD4 /* TableViewController.m */; };
-		0C20DDDF186EEF950088EFD4 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DDDE186EEF950088EFD4 /* CustomCell.m */; };
 		2CB2692B185F573900744AAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB2692A185F573900744AAF /* Foundation.framework */; };
 		2CB2692D185F573900744AAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB2692C185F573900744AAF /* CoreGraphics.framework */; };
 		2CB2692F185F573900744AAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB2692E185F573900744AAF /* UIKit.framework */; };
@@ -41,10 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C20DDDA186EEF8B0088EFD4 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		0C20DDDB186EEF8B0088EFD4 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		0C20DDDD186EEF950088EFD4 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
-		0C20DDDE186EEF950088EFD4 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		2CB26927185F573900744AAF /* Formatter_ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formatter_ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB2692A185F573900744AAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CB2692C185F573900744AAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -154,10 +148,6 @@
 				2CB2696F185F574900744AAF /* Main.storyboard */,
 				2CB26970185F574900744AAF /* ViewController.h */,
 				2CB26971185F574900744AAF /* ViewController.m */,
-				0C20DDDA186EEF8B0088EFD4 /* TableViewController.h */,
-				0C20DDDB186EEF8B0088EFD4 /* TableViewController.m */,
-				0C20DDDD186EEF950088EFD4 /* CustomCell.h */,
-				0C20DDDE186EEF950088EFD4 /* CustomCell.m */,
 				2CB26942185F573900744AAF /* Images.xcassets */,
 				2CB26931185F573900744AAF /* Supporting Files */,
 			);
@@ -338,11 +328,9 @@
 			files = (
 				2CB26979185F574900744AAF /* ViewController.m in Sources */,
 				2CB26973185F574900744AAF /* Formatter.m in Sources */,
-				0C20DDDF186EEF950088EFD4 /* CustomCell.m in Sources */,
 				2CB26974185F574900744AAF /* UIView+Name.m in Sources */,
 				2CB26972185F574900744AAF /* Constraint.m in Sources */,
 				2CB26937185F573900744AAF /* main.m in Sources */,
-				0C20DDDC186EEF8B0088EFD4 /* TableViewController.m in Sources */,
 				2CB26977185F574900744AAF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

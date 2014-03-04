@@ -55,6 +55,20 @@
     return constraint.ID;
 }
 
+-(void)addConstraints:(Constraint *)constraint, ... NS_REQUIRES_NIL_TERMINATION
+{
+    Constraint *currentConstraint;
+    va_list argumentList;
+    
+    if (constraint)
+    {
+        [self addConstraint:constraint];
+        va_start(argumentList, constraint);
+        while ((currentConstraint = va_arg(argumentList, id)))
+            [self addConstraint:currentConstraint];
+    }
+}
+
 -(void)removeConstraint:(Constraint *)constraint
 {
     if (!constraint)

@@ -17,6 +17,7 @@
 -(id)initWithWorkspace:(UIView *)workspace withController:(UIResponder *)controller;
 
 -(NSString *)addConstraint:(Constraint *)constraint;
+-(void)addConstraints:(Constraint *)constraint, ... NS_REQUIRES_NIL_TERMINATION;
 
 -(void)removeConstraint:(Constraint *)constraint;
 -(void)removeConstraintByID:(NSString *)ID;

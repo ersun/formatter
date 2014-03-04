@@ -66,6 +66,7 @@
     
     [formatter addConstraint:verticalConstraintLine1]; // Adding constraint to formatter
     
+    [formatter addConstraints:verticalConstraintLine1, verticalConstraintLine1, nil];
     
     //2- Adding constraint with Constraint class method
     [formatter addConstraint:[Constraint constraintView:key1
@@ -94,7 +95,7 @@
             V:view1->view2 for vertical,
             H:view1->view2 for horizontal
         if connected to super view:
-            view1->TOP , view1->BOTTOM, view1->LEFT, view1-> RIGHT
+            view1->TOP , view1->BOTTOM, view1->LEFT, view1->RIGHT
      
      */
     
